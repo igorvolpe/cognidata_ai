@@ -35,9 +35,6 @@ graph TD
 ├── build_lakehouse.py       # Script orquestrador da carga do Lakehouse
 ├── requirements.txt         # Lista de dependências Python
 └── README.md                # Documentação oficial do repositório
-🚀 Como Executar o Projeto1. Clonar o RepositórioBashgit clone https://github.com/igorvolpe/cognidata_ai.git
-cd cognidata_ai
-2. Instalar as DependênciasBashpip install -r requirements.txt
-3. Processar Dados e Gerar o LakehouseBashpython build_lakehouse.py
-4. Iniciar a Aplicação StreamlitBashpython -m streamlit run app.py
-Acesse o painel no navegador através do endereço http://localhost:8501.📄 LicençaEste projeto está sob a licença MIT. Desenvolvido por Igor Volpe.
+
+📄 Licença
+Este projeto está sob a licença MIT. Desenvolvido por Igor Volpe.
