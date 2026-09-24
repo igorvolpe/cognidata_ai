@@ -24,15 +24,3 @@ graph TD
     
     E --> G[Dashboard Streamlit]
     F --> G
-
-cognidata_ai/
-├── data/
-│   ├── raw/                 # Documentos brutos (Contratos e Transcrições)
-│   └── processed/           # Banco de dados SQLite gerado (cognidata.db)
-├── src/
-│   ├── agents/              # Módulo do Agente Cognitivo (agent_engine.py)
-│   └── data_pipeline/       # Scripts de geração e ETL dos dados
-├── app.py                   # Aplicação Principal (Streamlit)
-├── build_lakehouse.py       # Script orquestrador da carga do Lakehouse
-├── requirements.txt         # Lista de dependências Python
-└── README.md                # Documentação oficial do repositório
