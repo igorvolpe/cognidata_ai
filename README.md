@@ -1,43 +1,42 @@
-# ⚡ CogniData AI — Enterprise Intelligence Copilot & Unstructured Lakehouse
+# ⚡ CogniData AI — Enterprise Intelligence Copilot
 
-[![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-red.svg)](https://streamlit.io/)
-[![SQLite](https://img.shields.io/badge/Database-SQLite_Lakehouse-green.svg)](https://www.sqlite.org/)
-[![Architecture](https://img.shields.io/badge/Architecture-ETL_%2B_RAG_%2B_Text--to--SQL-purple.svg)](#-arquitetura-da-solução)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![SQLite](https://img.shields.io/badge/SQLite-Lakehouse-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://sqlite.org)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-> **CogniData AI** é uma plataforma de inteligência de dados de ponta a ponta que transforma documentos não-estruturados (contratos em PDF/TXT e transcrições de áudio/atendimento) em um **Data Lakehouse Relacional indexado**, munido de um **Agente Cognitivo Autônomo** para análise de risco de churn, auditoria contratual e inteligência de negócios em tempo real.
+Plataforma de inteligência de dados que transforma documentos não-estruturados (contratos jurídicos e transcrições de atendimento) em um **Data Lakehouse Relacional**, integrando um **Agente Cognitivo Autônomo (Text-to-SQL + RAG)** para auditoria contratual e prevenção de churn.
 
 ---
 
-## 📐 Arquitetura da Solução
+## 🎯 Arquitetura da Solução
 
 ```mermaid
 flowchart TD
-    subgraph RawData ["1. Dados Não-Estruturados (Raw)"]
-        A[Contratos Jurídicos .txt]
-        B[Transcrições de Suporte .txt]
+    subgraph Inputs ["1. Fontes de Dados Não-Estruturados"]
+        A[📄 Contratos Jurídicos .txt]
+        B[💬 Transcrições de Atendimento .txt]
     end
 
-    subgraph Pipeline ["2. Engine de ETL & Structuring"]
-        C[Regex Extractors & Parsers]
-        D[Normalizador de Entidades & KPIs]
+    subgraph ETL ["2. Pipeline de Processamento (ETL)"]
+        C[🔍 Extração com Regex & Rules]
+        D[🧹 Normalizador & Estruturador]
     end
 
-    subgraph Lakehouse ["3. Structured Lakehouse"]
-        E[(tb_contratos)]
-        F[(tb_atendimentos)]
+    subgraph Lakehouse ["3. Data Lakehouse (SQLite)"]
+        E[(📊 tb_contratos)]
+        F[(📊 tb_atendimentos)]
     end
 
-    subgraph CopilotEngine ["4. Agente Cognitivo (CogniData Engine)"]
-        G[Intent Classifier & Intent Routing]
-        H[Text-to-SQL Compiler]
-        I[Document Search RAG Engine]
+    subgraph Agent ["4. Agente Cognitivo Autônomo"]
+        G[🎯 Roteador de Intenções]
+        H[💻 Engine Text-to-SQL]
+        I[📑 RAG - Busca Documental]
     end
 
-    subgraph Frontend ["5. Interface Executiva (Streamlit)"]
-        J[Copilot Chat Interface]
-        K[Data Explorer & Export CSV]
-        L[Auditoria de Contratos Brutos]
+    subgraph UI ["5. Dashboard Executivo (Streamlit)"]
+        J[💬 Chat Copilot]
+        K[📈 Explorer do Data Lakehouse]
     end
 
     A --> C
@@ -45,22 +44,70 @@ flowchart TD
     C --> D
     D --> E
     D --> F
+
+    G --> H
+    G --> I
+
     E --> H
     F --> H
     A --> I
     B --> I
-    G --> H
-    G --> I
+
     H --> J
     I --> J
     E --> K
     F --> K
-    A --> L
-    B --> L
 
-    🔥 Funcionalidades ChaveParsing Automático de Textos Desestruturados: Algoritmos em Python e Regex avançado extraem entidades complexas como CNPJ, Vigência, Multa Revisional, Ticket Mensal e Churn Risk Score de documentos brutos.Data Lakehouse Relacional (SQLite): Schema analítico otimizado (tb_contratos e tb_atendimentos) projetado para consultas SQL agregadas de alta performance.Agente Cognitivo Hybrid (Text-to-SQL + RAG):Text-to-SQL: Converte perguntas em linguagem natural em queries SQL complexas (com GROUP BY, JOIN, e ordenação de risco).Document RAG: Varre o conteúdo textual bruto para localizar cláusulas jurídicas específicas (ex: rescisão, multa e suspensão).Painel Web Interativo (Streamlit Enterprise):Copilot Chat: Assistente conversacional com atalhos de análise rápida.Data Lake Explorer: Inspeção de dados com download instantâneo de relatórios em formato CSV.Auditor de Documentos: Leitor integrado de contratos e transcrições em tempo real.🛠️ Tecnologias UtilizadasCamadaTecnologiaAplicaçãoLinguagem CorePython 3.10+Processamento de dados, lógica do agente e pipelinesPipeline ETLRe (Regex) / OSExtração de padrão em lote e parsing de textoLakehouse AnalyticsSQLite3 / PandasArmazenamento relacional e manipulação tabularAgente CognitivoCustom RAG + Text-to-SQLRoteamento de intenção e geração SQL sintéticaUser InterfaceStreamlitFrontend interativo, visualização e exportação🚀 Como Executar o ProjetoPré-requisitosTer o Python 3.10 ou superior instalado na sua máquina.1️⃣ Clonar o RepositórioBashgit clone [https://github.com/seu-usuario/cognidata_ai.git](https://github.com/seu-usuario/cognidata_ai.git)
+🔥 Principais Recursos:
+- ETL não-estruturado: Extração automática de CNPJ, vigência, multa revisional, MRR e risco de churn via Regex e regras de negócio.
+- Data Lakehouse Analítico: Armazenamento relacional e otimizado em SQLite (tb_contratos e tb_atendimentos).
+- Agente Cognitivo Híbrido: Engine Text-to-SQL: Converte perguntas em linguagem natural diretamente em consultas relacionais agregadas. Document RAG: Busca semântica e profunda de cláusulas contratuais e termos jurídicos nos arquivos originais.
+- Interface Interativa: Painel construído em Streamlit com chat em tempo real, navegação por abas e exportação de relatórios em CSV.
+
+🛠️ Tecnologias Utilizadas
+- Camada: Linguagem Base, Parsing & Regex, Data Lakehouse, Interface Web.
+- Tecnologia: Python 3.10+, re (Standard Library), SQLite3 / Pandas, Streamlit.
+- Função no Projeto: Lógica de processamento, agentes e pipeline. Extração de entidades e padrões textuais. Armazenamento analítico e manipulação de tabelas. Frontend interativo, visualização de dados e chat
+
+📂 Estrutura do Repositório
+cognidata_ai/
+├── data/
+│   ├── raw/                 # Documentos brutos (Contratos e Transcrições)
+│   └── processed/           # Banco de dados SQLite gerado (cognidata.db)
+├── src/
+│   ├── agents/              # Módulo do Agente Cognitivo (agent_engine.py)
+│   └── data_pipeline/       # Scripts de geração e ETL dos dados
+├── app.py                   # Aplicação Principal (Streamlit)
+├── build_lakehouse.py       # Script orquestrador da carga do Lakehouse
+├── requirements.txt         # Lista de dependências Python
+└── README.md                # Documentação oficial do repositório
+
+🚀 Como Executar o Projeto
+1. Clonar o Repositório
+Bash
+git clone [https://github.com/igorvolpe/cognidata_ai.git](https://github.com/igorvolpe/cognidata_ai.git)
 cd cognidata_ai
-2️⃣ Instalar as DependênciasBashpip install streamlit pandas
-3️⃣ Processar os Dados Brutos e Construir o LakehouseExecute o orquestrador do pipeline. Ele irá gerar os documentos sintéticos em data/raw/ e compilar o banco relacional em data/processed/cognidata.db:Bashpython build_lakehouse.py
-4️⃣ Iniciar a Aplicação CopilotBashpython -m streamlit run app.py
-Acesse no seu navegador em: http://localhost:8501📊 Estrutura do Banco de Dados (Lakehouse)📌 tb_contratoscliente (TEXT) — Nome da empresa contratanteservico (TEXT) — Tipo de solução/software contratadovalor_mensal (REAL) — Recorrência mensal (MRR)vigencia_meses (INTEGER) — Duração total em mesesvalor_total_contrato (REAL) — Total do contrato (ARR/LTV)multa_percentual (REAL) — % de rescisão antecipadarisco_financeiro (TEXT) — Classificação (Baixo, Médio, Alto)📌 tb_atendimentoscliente (TEXT) — Identificação da empresagravidade (TEXT) — Nível do chamadoclassificacao (TEXT) — Sentimento detectado na conversachurn_risk_score (INTEGER) — Nota de 0 a 10 para probabilidade de cancelamento📝 LicençaEste projeto está sob a licença MIT. Sinta-se à vontade para utilizar, modificar e contribuir!Developed with ⚡ by Igor
+2. Instalar as Dependências
+Bash
+pip install -r requirements.txt
+3. Processar Dados e Gerar o Lakehouse
+Bash
+python build_lakehouse.py
+4. Iniciar a Aplicação Streamlit
+Bash
+python -m streamlit run app.py
+Acesse o painel no navegador através do endereço http://localhost:8501
+
+📄 Licença
+Este projeto está sob a licença MIT. Desenvolvido por Igor Volpe.
+
+---
+
+### 📤 Atualizar no GitHub (Passo Final)
+
+Depois de salvar o arquivo no VS Code, rode estes 3 comandos rápidos no terminal para atualizar o seu GitHub:
+
+```powershell
+git add README.md
+git commit -m "docs: atualização completa do README com diagramas e layout profissional"
+git push
