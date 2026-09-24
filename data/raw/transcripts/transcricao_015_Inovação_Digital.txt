@@ -1,0 +1,12 @@
+TRANSCRIÇÃO DE CHAMADA DE SUPORTE #SUP-0015
+Data: 2024-08-17
+Cliente: Inovação Digital
+Atendente: Mariana Costa
+Gravidade: Média
+Classificação Preliminar: Insatisfeito
+
+[Atendente]: Olá, aqui é o Mariana Costa do suporte CogniData. Como posso ajudar a Inovação Digital hoje?
+[Cliente]: Olá. Estamos enfrentando problemas sérios com lentidão ao carregar relatórios executivos. Isso está impactando nossa operação!
+[Atendente]: Entendo perfeitamente a gravidade. Deixe-me verificar o status dos servidores e abrir um chamado de prioridade Média.
+[Cliente]: Preciso de uma solução urgente. Se isso continuar, teremos que rever nosso contrato e avaliar o cancelamento.
+[Atendente]: Compreendo sua frustração. Já encaminhei para a equipe de Engenharia Nível 3. O protocolo do atendimento é #PROT-71376.

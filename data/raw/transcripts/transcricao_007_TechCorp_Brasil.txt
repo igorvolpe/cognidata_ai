@@ -1,0 +1,12 @@
+TRANSCRIÇÃO DE CHAMADA DE SUPORTE #SUP-0007
+Data: 2024-08-24
+Cliente: TechCorp Brasil
+Atendente: Juliana Lima
+Gravidade: Alta
+Classificação Preliminar: Insatisfeito / Churn Risk
+
+[Atendente]: Olá, aqui é o Juliana Lima do suporte CogniData. Como posso ajudar a TechCorp Brasil hoje?
+[Cliente]: Olá. Estamos enfrentando problemas sérios com indisponibilidade do sistema no horário de pico. Isso está impactando nossa operação!
+[Atendente]: Entendo perfeitamente a gravidade. Deixe-me verificar o status dos servidores e abrir um chamado de prioridade Alta.
+[Cliente]: Preciso de uma solução urgente. Se isso continuar, teremos que rever nosso contrato e avaliar o cancelamento.
+[Atendente]: Compreendo sua frustração. Já encaminhei para a equipe de Engenharia Nível 3. O protocolo do atendimento é #PROT-54327.

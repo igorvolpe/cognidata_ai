@@ -1,0 +1,22 @@
+CONTRATO DE PRESTAÇÃO DE SERVIÇOS TÉCNICOS
+
+CONTRATANTE: TechCorp Brasil, localizado em BA.
+CONTRATADA: CogniData Services S.A.
+
+CLÁUSULA PRIMEIRA - DO OBJETO:
+O presente contrato tem como objeto a prestação de serviços de Consultoria em Segurança para a CONTRATANTE.
+
+CLÁUSULA SEGUNDA - DOS VALORES E CONDIÇÕES:
+Pela prestação dos serviços, a CONTRATANTE pagará o valor mensal de R$ 15,097.47.
+O prazo de vigência deste instrumento é de 24 meses, com início em 2024-07-15.
+
+CLÁUSULA TERCEIRA - DA RESCISÃO E MULTA:
+A rescisão antecipada por qualquer das partes sem justa causa implicará multa rescisória de 15% sobre o valor restante do contrato.
+Em caso de atraso no pagamento por mais de 30 dias, haverá suspensão imediata do serviço.
+
+CLÁUSULA QUARTA - DO FORO:
+Fica eleito o foro da comarca de São Paulo/SP para dirimir quaisquer dúvidas decorrentes deste contrato.
+
+São Paulo, 2024-07-15.
+__________________________________________
+CogniData Services & TechCorp Brasil

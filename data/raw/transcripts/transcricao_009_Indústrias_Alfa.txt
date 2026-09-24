@@ -1,0 +1,12 @@
+TRANSCRIÇÃO DE CHAMADA DE SUPORTE #SUP-0009
+Data: 2024-08-21
+Cliente: Indústrias Alfa
+Atendente: Carlos Silva
+Gravidade: Baixa
+Classificação Preliminar: Satisfeito / Expansão
+
+[Atendente]: Olá, aqui é o Carlos Silva do suporte CogniData. Como posso ajudar a Indústrias Alfa hoje?
+[Cliente]: Olá. Estamos enfrentando problemas sérios com solicitação de upgrade de plano empresarial. Isso está impactando nossa operação!
+[Atendente]: Entendo perfeitamente a gravidade. Deixe-me verificar o status dos servidores e abrir um chamado de prioridade Baixa.
+[Cliente]: Preciso de uma solução urgente. Se isso continuar, teremos que rever nosso contrato e avaliar o cancelamento.
+[Atendente]: Compreendo sua frustração. Já encaminhei para a equipe de Engenharia Nível 3. O protocolo do atendimento é #PROT-89066.

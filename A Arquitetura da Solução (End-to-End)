@@ -1,0 +1,14 @@
+[Arquivos Não-Estruturados] ──► [Pipelines de IA / Ingestão ETL]
+(PDFs, Áudios, Contratos)        │ (Whisper, Unstructured, PyPDF)
+                                 ▼
+[Camada de Armazenamento] ◄──────┴──────► [Vector DB & Semantic Search]
+(Delta Lake / DuckDB / SQL)                (Qdrant / ChromaDB)
+         ▲                                          ▲
+         └───────────────────┬──────────────────────┘
+                             ▼
+               [Agentes Autônomos de IA]
+               (LangChain / CrewAI / Function Calling)
+                             │
+                             ▼
+              [Dashboard Executivo & Copilot UI]
+              (Streamlit / Fast UI + Power BI Embed)
